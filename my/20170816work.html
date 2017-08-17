@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>20170816作业</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css "/>
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -11,7 +12,7 @@
 			}
 			
 			#item {
-				margin: 20px 120px;
+				margin: 20px 180px;
 				padding: 20px;
 			}
 			
@@ -71,6 +72,100 @@
 				vertical-align: bottom;
 			}
 			
+			#text1#text2{
+				position: absolute;
+				top: auto;
+				bottom: auto;
+			}
+			
+			#logo{
+				margin-left: 180px;
+				padding: 8px;
+				float: left;
+				
+			}
+			
+			#main_title{
+				border: 2px solid #888;
+				height: 80px;
+				text-align: center;
+				position: relative;
+			}
+			
+			#main_title2{
+				background: #f8f8f8;
+				height: 70px;
+				line-height: 90px;
+				position: relative;
+			}
+			
+			#main_title2_centent{
+				text-align: center;
+				width: 480px;
+				
+				margin: 0 auto;
+			}
+			
+			#a{
+				line-height: 80px;
+				position: absolute;
+				right: 380px;
+			}
+			
+			#b{
+				line-height: 80px;
+				position: absolute;
+				float: right;
+				right: 180px;
+			}
+			
+			#title2_image{
+				position: absolute;
+				right: 180px;
+				float: right;
+				top: 5px;
+				
+				
+			}
+			
+			#logos{
+				border-bottom: 1px dashed #bec2c3;
+				
+			
+				padding: 40px 0;
+				margin: 0 180px;
+			}
+			
+			#main_bottom{
+			background-color: #f1f5f8;	
+			
+			}
+			
+			#main_bottom_title{
+				font-size: 18px;
+				padding-top: 30px;
+				
+			}
+			
+			
+			#main_bottom_content{
+				margin: 0 180px;
+			}
+			
+			#jiazai{
+				text-align: center;
+				margin: 20px 0 50px 0;
+			}
+			
+			a{
+			text-decoration: none;
+			color: black;
+						}
+			
+			a:hover{
+				color: red;
+			}
+			
 			ul {
 				list-style: none;
 			}
@@ -78,14 +173,46 @@
 			li {
 				border-bottom: 1px solid #999;
 			}
-			
+			   
 			li:hover {
 				box-shadow: 0.5px 0.5px 1px 2px #888;
 			}
+			
 		</style>
 	</head>
 
 	<body>
+		<div id="main_title">
+			
+			<img id="logo" src="img/LOGO-footer.png"/>
+			<div id="b">
+				<a href="#">登录</a>
+				<span>|</span>
+				<a>注册</a>
+			</div>
+			<div id="a">
+				<a class="apandding" href="#">首页</a>
+				<a class="apandding" href="#">专题</a>
+				<a class="apandding" href="#">学堂</a>
+				<a class="apandding" href="#">展览</a>
+				<a class="apandding" href="#">创业基地</a>
+				<a class="apandding" href="#">关于我们</a>
+			</div>
+		</div>
+		<div id="main_title2">
+			<div id="title2_image">
+				<img src="img/new.png" />
+			</div>
+			<div id="main_title2_centent">
+				<a href="#" class="title2">全部</a>
+				<a href="#" class="title2">基础</a>
+				<a href="#" class="title2">窍门</a>
+				<a href="#" class="title2">名师</a>
+				<a href="#" class="title2">高级</a>
+				<a href="#" class="title2">后期</a>
+			</div>
+			
+		</div>
 		<div id="main">
 			<ul>
 				<li id="item">
@@ -103,17 +230,20 @@
 									</div>
 								</div>
 								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
 								</div>
 								<div id="bottom">
 									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
+										
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
+											
+										
 									</div>
 									<div id="pic">
 										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
+										<span id="text1"  style="color: black;">nicheng</span>
 										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
+										<span id="text2"  style="color: black;">12</span>
 
 										<img id="img3" src="img/icon04_cur.png" />
 										<img id="img4" src="img/icon05_cur.png" />
@@ -139,17 +269,17 @@
 									</div>
 								</div>
 								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
 								</div>
 								<div id="bottom">
 									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
 									</div>
 									<div id="pic">
 										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
+										<span id="text1"  style="color: black;">nicheng</span>
 										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
+										<span id="text2"  style="color: black;">12</span>
 
 										<img id="img3" src="img/icon04_cur.png" />
 										<img id="img4" src="img/icon05_cur.png" />
@@ -175,17 +305,17 @@
 									</div>
 								</div>
 								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
 								</div>
 								<div id="bottom">
 									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
 									</div>
 									<div id="pic">
 										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
+										<span id="text1"  style="color: black;">nicheng</span>
 										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
+										<span id="text2"  style="color: black;">12</span>
 
 										<img id="img3" src="img/icon04_cur.png" />
 										<img id="img4" src="img/icon05_cur.png" />
@@ -211,54 +341,18 @@
 									</div>
 								</div>
 								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
 								</div>
 
 								<div id="bottom">
 									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
 									</div>
 									<div id="pic">
 										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
+										<span id="text1"  style="color: black;">nicheng</span>
 										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
-
-										<img id="img3" src="img/icon04_cur.png" />
-										<img id="img4" src="img/icon05_cur.png" />
-										<img id="img5" src="img/icon05-1.png" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-				</li>
-				<li id="item">
-					<a id="itema" href="#">
-						<div>
-							<div id="img">
-								<img id="start" src="img/pic_250_141.jpg" />
-							</div>
-							<div id="content">
-								<div id="cotent_title">
-									<h2>瞬息之美  自在掌控</h2>
-									<div id="time">
-										<span>2017/08/16</span>
-										<img src="img/down1.png" />
-									</div>
-								</div>
-								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
-								</div>
-								<div id="bottom">
-									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
-									</div>
-									<div id="pic">
-										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
-										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
+										<span id="text2"  style="color: black;">12</span>
 
 										<img id="img3" src="img/icon04_cur.png" />
 										<img id="img4" src="img/icon05_cur.png" />
@@ -284,17 +378,53 @@
 									</div>
 								</div>
 								<div id="content_detial">
-									人生的每一个阶段，都需要我们有一种能力——同一时的时候，我们要谈谈恋爱。工作的时 候，我们要担心家庭。所以，这是一种平衡的能力。相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
 								</div>
 								<div id="bottom">
 									<div id="detial">
-										<a id="bottom_detial" href="#">查看详情 >></a>
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
 									</div>
 									<div id="pic">
 										<img id="img1" src="img/header.png" />
-										<span id="text1">nicheng</span>
+										<span id="text1"  style="color: black;">nicheng</span>
 										<img id="img2" src="img/icon03_cur.png" />
-										<span id="text2">12</span>
+										<span id="text2"  style="color: black;">12</span>
+
+										<img id="img3" src="img/icon04_cur.png" />
+										<img id="img4" src="img/icon05_cur.png" />
+										<img id="img5" src="img/icon05-1.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li id="item">
+					<a id="itema" href="#">
+						<div>
+							<div id="img">
+								<img id="start" src="img/pic_250_141.jpg" />
+							</div>
+							<div id="content">
+								<div id="cotent_title">
+									<h2>瞬息之美  自在掌控</h2>
+									<div id="time">
+										<span>2017/08/16</span>
+										<img src="img/down1.png" />
+									</div>
+								</div>
+								<div id="content_detial">
+									人生的每一个阶段，都需要我们有一种能力——同一时的时候相信 我，你做的到。你从来都不是一个人。不要抱怨，抱怨永远 只能显示你没本事。因为如果你有本事， 就可以改变现状，而不只是忍受。既然改变不了
+								</div>
+								<div id="bottom">
+									<div id="detial">
+										<span id="bottom_detial" class="a_text_color">查看详情 >></span>
+									</div>
+									<div id="pic">
+										<img id="img1" src="img/header.png" />
+										<span id="text1"  style="color: black;">nicheng</span>
+										<img id="img2" src="img/icon03_cur.png" />
+										<span id="text2"  style="color: black;">12</span>
 
 										<img id="img3" src="img/icon04_cur.png" />
 										<img id="img4" src="img/icon05_cur.png" />
@@ -307,6 +437,44 @@
 				</li>
 			</ul>
 		</div>
+		<div id="jiazai">
+			<img src="img/page.png"/>
+			<span>下拉加载更多</span>
+			
+		</div>
+		<div id="main_bottom">
+			<div id="logos">
+					<img src="img/logo1-cur.png" /><img src="img/logo2.png"  /><img src="img/logo3.png"/><img src="img/logo4.png"  /><img src="img/logo5.png"  /><img src="img/logo6.png"/>
+			</div>
+			<div id="main_bottom_content">
+				<div id="main_bottom_title" class="bottom_m">
+					<a href="#" class="bottom">专题</a>
+					<a href="#" class="bottom">学堂</a>
+					<a href="#" class="bottom">展览</a>
+					<a href="#" class="bottom">创业基地</a>
+					
+				</div>
+				<div id="main_bottom_title2" class="bottom_m" >
+					<a href="#" class="bottom">关于协会</a>
+					<a href="#" class="bottom">协会框架</a>
+					<a href="#" class="bottom">协会会员</a>
+					<a href="#" class="bottom">入门章程</a>
+					<a href="#" class="bottom">入会申请</a>
+				</div>
+				<div id="main_bottom_title3" class="bottom_m">
+					<span>中国国际广播电台摄影协会版权所有歇1997-20161P证浙BlB2-2O09O185</span>
+				</div>
+				<div id="main_bottom_title4" class="bottom_m">
+					<img src="img/icon01.png"/>
+					<span>photo@cir．com</span>
+					<img src="img/icon02.png"/>
+					<span >01058890825</span>
+				</div>
+			</div>
+				
+		</div>
+		
+		
 	</body>
 
 </html>
