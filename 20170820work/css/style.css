@@ -1,0 +1,22 @@
+.maintitlepandding{
+	padding: 0 10px;
+}
+.textcenter{
+	text-align: center;
+}
+.maininformation{
+	margin: 20px 0;
+}
+.float_l{
+	float: left;
+}
+.float_r{
+	float: right;
+	}
+.bottom{
+	padding: 0 15px 0 0;
+}
+.bottom_m{
+	margin: 20px 0 0 0;
+	
+}

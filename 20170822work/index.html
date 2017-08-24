@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#a{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				/*3d显示*/
+				transform-style: preserve-3d;
+				text-align: center;
+				/*文本垂直居中*/
+				line-height: 200px;
+				/*文字大小*/
+				font-size: 60px;
+				border: 2px solid darkcyan;
+				color: #fff;
+				animation: rotate360 10s linear infinite;
+			}
+			
+			@keyframes rotate360{
+				from{
+					transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+				}
+				to{
+					transform: rotateX(360deg)  rotateY(360deg)  rotateZ(360deg);
+				}
+			}
+			
+			#up{
+				position: absolute;
+				
+				
+				transform:translateZ(-100px);
+			}
+			
+			#you{
+				position: absolute;
+				
+				left: -100px;
+				transform: rotateY(-90deg);
+			}
+			
+			#down{
+				position: absolute;
+				
+				transform:translateZ(100px);
+			}
+			
+			#zuo{
+				position: absolute;
+			
+				left: 100px;
+				transform: rotateY(90deg);
+			}
+			
+			#qian{
+				position: absolute;
+				top: -100px;
+				transform: rotateX(90deg);
+			}
+			
+			#hou{
+				position: absolute;
+				
+				top: 100px;
+				transform: rotateX(-90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<div id="up" style="width: 200px ; height: 200px; background: red;">上</div>
+			<div id="hou" style="width: 200px ; height: 200px; background: darkgoldenrod;"">后</div>
+			<div id="zuo" style="width: 200px ; height: 200px; background: darkkhaki;">左</div>
+			<div id="qian" style="width: 200px ; height: 200px; background: #ff0;">前</div>
+			<div id="you" style="width: 200px ; height: 200px; background: #00f;">右</div>
+			<div  id="down" style="width: 200px ; height: 200px; background: #000;">下</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.p{
+				width: 1000px;
+				height: 200px;
+				background-color: #f00;
+				position: relative;
+			}
+			.s{
+				width: 100px;
+				height: 20px;
+				background-color: #0f0;
+				position: relative;
+				/*相对定位的top值百分比由父级的高度决定*/
+				top: 50%;
+				/*相对定位的left值百分比由父级的宽度决定*/
+				left: 50%;
+			}
+			.s1{
+				width: 100px;
+				height: 20px;
+				background-color: #00f;
+				/*绝对定位*/
+				position: absolute;
+				/*绝对定位的top值百分比是由参照物的高度决定的*/
+				top: 50%;
+				/*绝对定位的left值百分比是由参照物的宽度决定的*/
+				left: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p">
+			<div class="s"></div>
+			<div class="s1"></div>
+		</div>
+	</body>
+</html>

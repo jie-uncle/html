@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			.p{
+				/*宽度的百分比值由父级的宽度决定的*/
+				width: 10%;
+				/*高度的百分比值由父级的高度决定的*/
+				height: 10%;
+				/*边框不可以写百分比*/
+				border: 10px solid #000;
+				/*内边距左右百分比值是有父级的宽决定的*/
+				padding-left: 50%;
+				/*内边距上下百分比值是有父级的宽决定的*/
+				padding-top: 50%;
+				/*外边距左右百分比值是有父级的宽决定的*/
+				margin-left: 50%;
+				/*外边距上下百分比值是有父级的宽决定的*/
+				margin-top: 50%;
+				background-color: red;
+			}
+			.s{
+				font-size: 40px;
+				width: 50%;
+				height: 50%;
+				/*行高是由文字大小决定*/
+				line-height: 1.2;
+				background-color: green;
+				/*固定定位*/
+				position: fixed;
+				/*固定定位的top值是由屏幕的高度决定的*/
+				top: 5%;
+				/*固定定位的left值是由屏幕的宽度决定的*/
+				left: 5%;
+			}
+			.s1{
+				width: 200%;
+				height: 10%;
+				background-color: #00f;
+				/*相对定位*/
+				position: relative;
+				top: 50%;
+				/*left: 100px;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p">
+			<div class="s">
+				<p>我是测试行高</p>
+				<p>我是测试行高</p>
+			</div>
+			<div class="s1">
+				<p>我是测试行高</p>
+				<p>我是测试行高</p>
+			</div>
+		</div>
+	</body>
+</html>

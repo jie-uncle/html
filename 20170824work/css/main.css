@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background-color: #fff;
+}
+/*===========页面样式===============*/
+.box{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.pages{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.pages>li{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.page0{
+	background-color: #f00;
+}
+.page1{
+	background-color: #0f0;
+}
+.page2{
+	background-color: #00f;
+}
+.page3{
+	background-color: #ff0;
+}
+.page4{
+	background-color: #f0f;
+}
+.page5{
+	background-color: #0ff;
+}
+.toTop{
+	animation: pageToTop .8s ease forwards;
+}
+@keyframes pageToTop{
+	from{
+		transform: translateX(0) scale(1);
+	}
+	to{
+		transform: translateX(-100%) scale(0.2);
+	}
+}
+
+.frombottom{
+	animation: pageFromBottom .8s ease forwards;
+}
+
+@keyframes pageFromBottom{
+	from{
+		transform: translateX(100%)scale(0.2);
+	}
+	to{
+		transform: translateX(0)scale(1);
+	}
+}
+
+.toBottom{
+	animation: pageToBottom .8s ease forwards;
+}
+@keyframes pageToBottom{
+	from{
+		transform: translateX(0) scale(1);
+	}
+	to{
+		transform: translateX(100%) scale(0.2);
+	}
+}
+
+.fromTop{
+	animation: pageFromTop .8s ease forwards;
+}
+@keyframes pageFromTop{
+	from{
+		transform: translateX(-100%) scale(0.2);
+	}
+	to{
+		transform: translateX(0) scale(1);
+	}
+}
+
+.pagetobottom{
+	transform: translateX(100%);
+}
+
+
+

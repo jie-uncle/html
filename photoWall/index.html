@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				/*有兼容性问题*/
+				/*谷歌、苹果---webkit*/
+				-webkit-perspective: 2000;
+				-ms-perspective: 2000;
+				-o-perspective: 2000;
+				-moz-perspective: 2000;
+				perspective: 2000;
+				perspective-origin: 80% 70%;
+			}
+			#p{
+				width: 540px;
+				height: 400px;
+				margin: 50px auto;
+				
+				position: relative;
+				transform-style: preserve-3d;
+				animation: rotate360 5s linear infinite;
+			}
+			
+			#p>div{
+				width: 540px;
+				
+				position: absolute;
+				
+			}
+			
+			@keyframes rotate360{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+				}
+			}
+			
+			#s1{
+				background: red;
+				transform: translateZ( 800px);
+			}
+			#s2{
+				background: #0f0;
+				
+				transform: rotateY(-40deg) translateZ( 800px);
+			}
+			#s3{
+				background: #00f;
+				
+				transform: rotateY(-80deg)translateZ( 800px);
+			}
+			#s4{
+				background: #ff0;
+				
+				transform: rotateY(-120deg)translateZ( 800px);
+			}
+			#s5{
+				background: #0ff;
+				
+				transform: rotateY(-1600deg)translateZ( 800px);
+			}
+			#s6{
+				background: #f0f;
+				
+				transform: rotateY(40deg)translateZ( 800px);
+			}
+			#s7{
+				background: burlywood;
+				
+				transform: rotateY(80deg)translateZ( 800px);
+			}
+			#s8{
+				background: darkolivegreen;
+				
+				transform: rotateY(120deg)translateZ( 800px);
+			}
+			#s9{
+				background: lightgreen;
+				
+				transform: rotateY(160deg)translateZ( 800px);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="p">
+			<div id="s1"><img src="img/QQ图片20170731134538.jpg"/> </div>
+			<div id="s2"><img src="img/QQ图片20170731134616.jpg"/> </div>
+			<div id="s3"><img src="img/QQ图片20170731134621.jpg"/> </div>
+			<div id="s4"><img src="img/QQ图片20170731134538.jpg"/> </div>
+			<div id="s5"><img src="img/QQ图片20170731134616.jpg"/> </div>
+			<div id="s6"><img src="img/QQ图片20170731134621.jpg"/> </div>
+			<div id="s7"><img src="img/QQ图片20170731134538.jpg"/> </div>
+			<div id="s8"><img src="img/QQ图片20170731134616.jpg"/> </div>
+			<div id="s9"><img src="img/QQ图片20170731134621.jpg"/> </div>
+		</div>
+		
+	
+	</body>
+</html>
