@@ -1,6 +1,6 @@
 $(function(){
 	var index = 0;
-	var dist = 960;
+	var dist = $('.banner_wrap img').width();
 	var timer = null;
 	$(".arrow_right").click(function(){
 		clearInterval(timer);
