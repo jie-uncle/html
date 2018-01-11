@@ -870,7 +870,7 @@ position: relative;
 	margin-top: 20px;
 	font-size: 0;
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .xiaomiStar>div,.recommend_foryou>div{
 	position: absolute;
@@ -928,6 +928,9 @@ position: relative;
 }
 .product_content>div.recommend_foryou>ul>li:hover{
 	animation: all .5s linear;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3) ;
+	
 }
 .product_content>div.recommend_foryou>ul>li{
 	width: 4.8%;
@@ -1118,7 +1121,7 @@ position: relative;
 	transition: top 0.1s linear; 
 }
 .product_content>div>ul>li>div>ul>li:hover{
-	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 	animation: all .5s linear;
 	transform: translateY(-2px);
 }
@@ -1530,7 +1533,7 @@ position: relative;
 	color: #333333;
 }
 .hot_products>div>ul>li:hover{
-	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 	animation: all .5s linear;
 	transform: translateY(-2px);
 }
@@ -1547,9 +1550,9 @@ position: relative;
 	overflow: hidden;
 }
 .product_content>.content_botton>ul>li:hover{
-	box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
 animation: all .5s linear;
 transform: translateY(-2px);
+box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 }
 .product_content>.content_botton>ul>li:hover>div{
 	display: block;
@@ -1806,7 +1809,7 @@ background: white;
 .product_content>.video>ul>li:hover{
 	animation: all .5s linear;
 	transform: translateY(-2px);
-	box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 }
 .product_content>.video>ul>li+li{
 	margin-left: 1%;
@@ -1859,40 +1862,40 @@ background: white;
 @-webkit-keyframes all{
 	0%{
 		transform: translateY(0px);
-		box-shadow: 0 0 0 rgba(0,0,0,0.2) ;
+		box-shadow: 0 0 0 rgba(0,0,0,0) ;
 	}
 	100%{
 		transform: translateY(-2px);
-		box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+		box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 	}
 }
 @-moz-keyframes all{
 	0%{
 		transform: translateY(0px);
-		box-shadow: 0 0 0 rgba(0,0,0,0.2) ;
+		box-shadow: 0 0 0 rgba(0,0,0,0) ;
 	}
 	100%{
 		transform: translateY(-2px);
-		box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+		box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 	}
 }
 @-ms-keyframes all{
 	0%{
 		transform: translateY(0px);
-		box-shadow: 0 0 0 rgba(0,0,0,0.2) ;
+		box-shadow: 0 0 0 rgba(0,0,0,0) ;
 	}
 	100%{
 		transform: translateY(-2px);
-		box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+		box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 	}
 }
 @-o-keyframes all{
 	0%{
 		transform: translateY(0px);
-		box-shadow: 0 0 0 rgba(0,0,0,0.2) ;
+		box-shadow: 0 0 0 rgba(0,0,0,0) ;
 	}
 	100%{
 		transform: translateY(-2px);
-		box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+		box-shadow: 0 10px 10px rgba(0,0,0,0.3) ;
 	}
 }
