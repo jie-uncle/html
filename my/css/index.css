@@ -1,0 +1,209 @@
+html,
+body,
+img,
+div,
+a,
+p,
+span,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: 0 none;
+}
+ul {
+  list-style: none;
+}
+@-webkit-keyframes fade {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+}
+html body .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html body .wrap .content {
+  width: 100%;
+  height: 100%;
+  transition: margin-top 0.5s linear;
+}
+html body .wrap .content ul {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html body .wrap .content ul:hover > li > span {
+  display: block;
+}
+html body .wrap .content ul li {
+  width: 31px;
+  height: 24px;
+  padding: 20px 0;
+  position: relative;
+  background: url("../img/sidebar.png") no-repeat center -208px;
+}
+html body .wrap .content ul li img {
+  width: 100%;
+  height: 100%;
+}
+html body .wrap .content ul li span {
+  position: absolute;
+  left: -60px;
+  width: 60px;
+  height: 64px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  font-size: 14px;
+  cursor: pointer;
+  top: 22px;
+  display: none;
+}
+html body .wrap .content ul li span:hover {
+  color: #ffffff;
+}
+html body .wrap .content ul li.current:after {
+  display: block;
+  transform: rotate(30deg);
+  width: 31px;
+  height: 24px;
+  content: '';
+  background: url("../img/sidebar_i_curr.png") no-repeat center center;
+  background-size: 31px  24px;
+}
+html body .wrap .content ul li.current span {
+  color: #ffffff;
+}
+html body .wrap .content .page {
+  width: 100%;
+  height: 100%;
+}
+html body .wrap .content .page.home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #c2ffdb;
+}
+html body .wrap .content .page.home .bg {
+  width: 100%;
+  height: 100%;
+}
+html body .wrap .content .page.home .bg .shade {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+html body .wrap .content .page.aboutme {
+  background: #bdd3ff;
+}
+html body .wrap .content .page.skill {
+  background: #d1ffae;
+}
+html body .wrap .content .page.works {
+  background: #ffd9ca;
+}
+html body .wrap .content .page.contact {
+  background: #e0dcff;
+}

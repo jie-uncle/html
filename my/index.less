@@ -1,0 +1,172 @@
+html,body,img,div,a,p,span,ul,li{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+img{
+  border: 0 none;
+}
+ul{
+  list-style: none;
+}
+@-webkit-keyframes fade{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-moz-keyframes fade{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-o-keyframes fade{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-ms-keyframes fade{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+html{
+  width: 100%;
+  height: 100%;
+  body{
+    width: 100%;
+    height: 100%;
+    .wrap{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .content{
+        width: 100%;
+        height: 100%;
+        transition: margin-top .5s linear;
+        ul{
+          position: fixed;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+        &:hover{
+          &>li>span{
+            display: block;
+          }
+        }
+          li{
+            width: 31px;
+            height: 24px;
+            padding: 20px 0;
+            position: relative;
+            background: url("../img/sidebar.png") no-repeat center -208px;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+            span{
+              position: absolute;
+              left: -60px;
+              width: 60px;
+              height: 64px;
+              color: rgba(255,255,255,0.6);
+              text-align: right;
+              font-size: 14px;
+              cursor: pointer;
+              top: 22px;
+              display: none;
+              &:hover{
+                color: #ffffff;
+              }
+            }
+
+            &.current{
+
+              &:after{
+                display: block;
+                transform: rotate(30deg);
+                width: 31px;
+                height: 24px;
+                content: '';
+                background: url("../img/sidebar_i_curr.png") no-repeat center center;
+                background-size:31px  24px;
+              }
+              span{
+                color: rgba(255,255,255,56);
+              }
+            }
+          }
+        }
+        .page{
+          width: 100%;
+          height: 100%;
+          &.home{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #c2ffdb;
+            .bg{
+              width: 100%;
+              height: 100%;
+              .shade{
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.6);
+              }
+            }
+          }
+          &.aboutme{
+            background: #bdd3ff;
+          }
+          &.skill{
+            background: #d1ffae;
+          }
+          &.works{
+            background: #ffd9ca;
+          }
+          &.contact{
+            background: #e0dcff;
+          }
+
+        }
+      }
+    }
+  }
+}
