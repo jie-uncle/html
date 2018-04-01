@@ -1,0 +1,170 @@
+html,
+body,
+img,
+div,
+a,
+p,
+span,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: 0 none;
+}
+ul,
+li {
+  list-style: none;
+}
+@-webkit-keyframes down_menu_animaition {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-moz-keyframes down_menu_animaition {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-o-keyframes down_menu_animaition {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+@-ms-keyframes down_menu_animaition {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+  }
+}
+.float_r {
+  float: right;
+}
+.model {
+  width: 100%;
+  overflow-x: hidden;
+}
+.model .fixedNav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0);
+}
+.model .fixedNav .menu {
+  height: 0rem;
+  overflow: hidden;
+  text-align: right;
+  position: absolute;
+  transition: height .3s linear;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+}
+.model .fixedNav .menu.show {
+  display: block;
+  height: 8rem;
+}
+.model .fixedNav .menu li {
+  font-size: 0.65rem;
+  padding: 0 0.5rem;
+  line-height: 1.5rem;
+}
+.model .fixedNav .menu li a {
+  color: white;
+  display: block;
+}
+.model .fixedNav > span {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: white;
+}
+.model .fixedNav > span:nth-of-type(1) {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.model .main .home {
+  height: 17.5rem;
+  background: url(../img/bg5.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.model .main .aboutme {
+  height: 42.5rem;
+}

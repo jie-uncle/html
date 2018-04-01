@@ -193,7 +193,7 @@ html body .wrap .content .page.home .bg {
 html body .wrap .content .page.home .bg .shade {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
 }
 html body .wrap .content .page.aboutme {
   background: #bdd3ff;

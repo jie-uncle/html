@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var pixelRatio=1/window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+',user-scalable=no" />');
+        var html=document.getElementsByTagName('html')[0];
+        getRem();
+        window.addEventListener('resize',getRem,false);
+        function getRem(){
+            var pageWidth=html.getBoundingClientRect().width;
+            html.style.fontSize=pageWidth/16+'px';
+        }
+    </script>
+    <link rel="stylesheet" href="css/my.css"/>
+    <link rel="stylesheet" href="font/iconfont.css"/>
+</head>
+<body>
+<div class="model">
+    <div class="fixedNav top">
+    	<span>RESUME</span>
+        <ul class="menu">
+            <li class="current"><a href="#?1">首页</a></li>
+            <li><a href="#?2">关于我</a></li>
+            <li><a href="#?3">技能</a></li>
+            <li><a href="#?4">作品</a></li>
+            <li><a href="#?5">联系我</a></li>
+        </ul>
+        <span class="icon iconfont icon-iconset0193 float_r down_menu"></span>
+    </div>
+    <div class="main">
+        <div class="home"></div>
+        <div class="aboutme"></div>
+        <div class="skill"></div>
+        <div class="works"></div>
+        <div class="contact"></div>
+    </div>
+
+
+</div>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/my.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+html,body,img,div,a,p,span,ul,li{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+img{
+  border: 0 none;
+}
+ul,li{
+  list-style: none;
+}
+@-webkit-keyframes down_menu_animaition{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-moz-keyframes down_menu_animaition{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-o-keyframes down_menu_animaition{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@-ms-keyframes down_menu_animaition{
+  0%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+  50%{
+    transform:  scale(1.5);
+    filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;
+  }
+  100%{
+    transform: scale(1);
+    filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity: 1; opacity: 1;
+  }
+}
+@rem:40rem;
+@width:16rem;
+.float_r{
+  float: right;
+}
+.model{
+  width: 100%;
+  overflow-x: hidden;
+  .fixedNav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100/@rem;
+    background:rgba(0,0,0,0);
+    .menu{
+      &.show{
+          display: block;
+          height: 320/@rem;  
+      }
+      height:0/@rem;
+      overflow: hidden;
+      text-align : right;
+      position : absolute;
+      transition: height .3s linear;
+      top : 100/@rem;
+      left : 0;
+      width : 100%;
+      li{
+        font-size : 26/@rem;
+        padding : 0 20/@rem ;
+        line-height: 60/@rem;
+        a{
+            color: white;
+            display: block;
+        }
+      }
+    }
+    &>span{
+        &:nth-of-type(1){
+            margin-left: 20/@rem;
+            font-size: 40/@rem;
+        }
+      line-height: 100/@rem;
+      font-size: 60/@rem;
+      margin-right: 20/@rem;
+      color: white;
+    }
+  }
+  .main{
+      .home{
+          height: 700/@rem;
+          background: url(../img/bg5.jpg) no-repeat;
+          background-size:100% 100%;
+      }
+      .aboutme{
+          height: 1700/@rem;
+      }
+  }
+}
