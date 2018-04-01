@@ -3,8 +3,9 @@ $(function(){
 	window.onscroll = function(e) {
 		var a=$('html').css('font-size');
 		var b=parseInt(a);
-		console.log(e);
+		
          scroll = document.documentElement.scrollTop || document.body.scrollTop;
+         console.log(scroll);
 		var c=parseFloat(scroll/((300/40)*b)*0.6);
 		if(c<=0.6){
 			$('.fixedNav').css({'background':'rgba(0,0,0,'+c+')'});
