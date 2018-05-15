@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <title></title>
     <script>
+        function isMobile(){
+            var ua = navigator.userAgent.toLowerCase();
+            var StringPhoneReg = "\\b(ip(hone|od)|android|opera m(ob|in)i"
+                    + "|windows (phone|ce)|blackberry"
+                    + "|s(ymbian|eries60|amsung)|p(laybook|alm|rofile/midp"
+                    + "|laystation portable)|nokia|fennec|htc[-_]"
+                    + "|mobile|up.browser|[1-4][0-9]{2}x[1-4][0-9]{2})\\b";
+            var StringTableReg = "\\b(ipad|tablet|(Nexus 7)|up.browser"
+                    + "|[1-4][0-9]{2}x[1-4][0-9]{2})\\b";
+            var isIphone = ua.match(StringPhoneReg),
+                    isTable = ua.match(StringTableReg),
+                    isMobile = isIphone || isTable;
+            if(isMobile) {
+
+                return true;
+            }else {
+                window.location.href="index.html";
+                return false;
+            }
+        }
+        isMobile();
+    </script>
+    <script>
         var pixelRatio=1/window.devicePixelRatio;
         document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+',user-scalable=no" />');
         var html=document.getElementsByTagName('html')[0];
@@ -34,11 +57,29 @@
         <span class="icon iconfont icon-iconset0193 float_r down_menu"></span>
     </div>
     <div class="main">
-        <div class="home"></div>
-        <div class="aboutme"></div>
-        <div class="skill"></div>
-        <div class="works"></div>
-        <div class="contact"></div>
+        <div class="home">
+        	<div class="simple_show" >
+        		<p>As long as the road is right</p>
+                <p>is not afraid of road far</p>
+                <p>我叫荀高杰<br/>
+                   一名前端开发工程师</p>
+        	</div>
+        </div>
+        <div class="aboutme">
+             <h2 class="title">关于我</h2>
+             <p>
+                我是一名大三计算机专业
+             </p>
+        </div>
+        <div class="skill">
+            <h2 class="title">掌握技能</h2>
+        </div>
+        <div class="works">
+            <h2 class="title">我的作品</h2>
+        </div>
+        <div class="contact">
+            <h2 class="title">联系我</h2>
+        </div>
     </div>
 
 

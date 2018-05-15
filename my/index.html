@@ -3,10 +3,52 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>个人简介</title>
+        <script>
+            function isMobile(){
+                var ua = navigator.userAgent.toLowerCase();
+                var StringPhoneReg = "\\b(ip(hone|od)|android|opera m(ob|in)i"
+                        + "|windows (phone|ce)|blackberry"
+                        + "|s(ymbian|eries60|amsung)|p(laybook|alm|rofile/midp"
+                        + "|laystation portable)|nokia|fennec|htc[-_]"
+                        + "|mobile|up.browser|[1-4][0-9]{2}x[1-4][0-9]{2})\\b";
+                var StringTableReg = "\\b(ipad|tablet|(Nexus 7)|up.browser"
+                        + "|[1-4][0-9]{2}x[1-4][0-9]{2})\\b";
+                var isIphone = ua.match(StringPhoneReg),
+                        isTable = ua.match(StringTableReg),
+                        isMobile = isIphone || isTable;
+                if(isMobile) {
+                    window.location.href="my.html";
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+            isMobile();
+        </script>
+        <script>
+            window.onload = function(){
+                var paragraph = document.getElementById('str');
+                var str = "My name is PeiWeiHua,I'm twenty-two";
+                var i = 0;
+                var str2 = '';
+                var timer = setInterval(function() {
+                    str2 += str[i]
+                    console.log(str2);
+                    paragraph.innerText = str2;
+                    i++;
+                    if(i>=str.length){
+                        clearInterval(timer);
+                    }
+                }, 100)
+            }
+
+        </script>
         <link rel="stylesheet" href="css/index.css"/>
         <script src="js/jquery-1.8.3.min.js"></script>
+        
 	</head>
 	<body>
+    <p id="str"></p>
     <div class="wrap">
         <div class="content">
             <div  class="page home">
@@ -29,6 +71,7 @@
             </ul>
         </div>
     </div>
+    
 	  <script src="js/index.js"></script>
 	</body>
 </html>

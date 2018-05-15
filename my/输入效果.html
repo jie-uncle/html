@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .say{
+            position: relative;
+            animation: loading-text-type 5s steps(56),
+                        loading-text-caret .3s steps(1) infinite;
+            border-right: 1px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: bold;
+            color: #de6a5a;
+
+            display: none;
+            font-family: Consolas ,Monaco ,monospace;
+        }
+        @keyframes loading-text-type {
+            from{
+                width: 0;
+            }
+        }
+        @keyframes loading-text-caret {
+            50%{
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span class="say">肯定是部分可骄傲的把控的举办</span><br/>
+    <span class="say">奥德赛粉丝儿辣虚拟世界日我去帮忙想看我卡了我</span><br/>
+    <span class="say">as电饭锅好几款是对方过后是对方过后</span><br/>
+    <span class="say">窝气一千二土坯一起铺贴俄日维护费覅额hi而无法丢失</span><br/>
+    <span class="say">而缺乏ID速比us额个一稍等哈是一公金融贵人 上岛咖啡纳斯达克就是电脑 第三个女生看到跟你说 十多个开始对公司开工   十多个离开谁都不敢开连锁店 </span><br/>
+    <span class="say">撒发个   as发金卡班授课费 撒发顺丰    按时反馈巴斯克</span><br/>
+    <span class="say">三个高铁网二二二    无人区无若群无若我确认群无若群无   无人区万人前往</span><br/>
+    <span class="say">千万人 让我去  千万人群 王企人情味  人情味若 额外若翁 问题问题 </span><br/>
+    <span class="say">热液恶业有额我也有 也有儿也容易   儿也容易人 我让业务人员为 </span><br/>
+    <span class="say">我问他 问题问题我  问题问题  问题问题 </span><br/>
+    <span class="say">----------------------------------------</span><br/>
+</div>
+<script>
+    var strArr = document.getElementsByClassName('say');
+    var i=0;
+    var timer = setInterval(function(){
+        if(strArr[i-1]){
+            strArr[i-1].style.borderRight = '0px'
+        }
+        var n = getByteLen(strArr[i].innerHTML);
+
+
+        strArr[i].style.display = 'block';
+        strArr[i].style.width = n + 'ch';
+        i++;
+        if(i>=strArr.length){
+            clearInterval(timer)
+        }
+    },5000);
+    function getByteLen(val) {
+        var len = val.length;
+        for (var i = 0; i < val.length; i++) {
+
+            if (val.charCodeAt(i)>255) {
+                len +=1;
+            }
+        }
+        return len;
+    }
+</script>
+<script>
+
+//    var name = "The Window";
+//    var object = {
+//        name : "My Object",
+//        getNameFunc : function(){
+//            return function(){
+//                return this.name;
+//            };
+//        }
+//    };
+//    alert(object.getNameFunc()());
+</script>
+</body>
+</html>

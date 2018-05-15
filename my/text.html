@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content1{
+            width: 300px;
+            height: 50px;
+        }
+        #content1>div{
+            float: left;
+            width: 33%;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="content1">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<div id="content2">
+    <input type="checkbox" data="checkbox1"/>checkbox1
+    <input type="checkbox" data="checkbox2"/>checkbox2
+    <input type="checkbox" data="checkbox3"/>checkbox3
+</div>
+
+<script>
+    var checkArr = document.getElementsByTagName('input');
+    var boxArr = document.getElementsByClassName('box')
+    for(var i=0 ;i<checkArr.length;i++){
+        (function(j){
+
+            checkArr[j].addEventListener('click',function(){
+                if(checkArr[j].checked){
+                    boxArr[j].innerText = this.getAttribute("data");
+                }else{
+                    boxArr[j].innerText = '';
+                }
+            })
+        })(i)
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

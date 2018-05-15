@@ -6,7 +6,11 @@ a,
 p,
 span,
 ul,
-li {
+li,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
@@ -154,17 +158,41 @@ li {
   line-height: 2.5rem;
   font-size: 1.5rem;
   margin-right: 0.5rem;
-  color: white;
+  color: #ffffff;
 }
 .model .fixedNav > span:nth-of-type(1) {
   margin-left: 0.5rem;
   font-size: 1rem;
 }
+.model .main {
+  color: rgba(13, 4, 14, 0.9);
+}
+.model .main > div {
+  padding: 2.5rem 0 1.5rem;
+}
+.model .main > div .title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .model .main .home {
-  height: 17.5rem;
-  background: url(../img/bg5.jpg) no-repeat;
-  background-size: 100% 100%;
+  height: 21.25rem;
+  background: url(../img/bg3.jpg) no-repeat center center;
+  background-size: auto 100%;
+}
+.model .main .home .simple_show {
+  padding: 6.25rem 0 0 0;
+}
+.model .main .home .simple_show p {
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+.model .main .home .simple_show p:nth-of-type(3) {
+  margin-top: 2rem;
+  padding-right: 1.375rem;
+  text-align: right;
 }
 .model .main .aboutme {
-  height: 42.5rem;
+  height: 7.5rem;
 }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-demo-sale-platform</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      html{
+        width: 100%;
+        height: 100%;
+      }
+      body{
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .box{
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #cccccc;
+      }
+      form>div{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+      }
+      form{
+        padding: 20px 0;
+      }
+      form>h1{
+        font-size: 30px;
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      form>div>label{
+        float: left;
+        text-align: center;
+        display: inline-block;
+        width: 80px;
+      }
+      form>div>input{
+       float: right;
+        border: none;
+        outline: none;
+        width: 180px;
+        height: 20px;
+        padding: 5px 8px;
+        margin-top: 5px;
+        margin-right: 20px;
+      }
+      form>div>input::after{
+        content: "";
+        clear: both;
+        width: 0;
+        height: 0;
+      }
+      form>button{
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        margin: 0 110px;
+        margin-top: 10px;
+      }
+      .sex{
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <!-- built files will be auto injected -->
+    <div class="box">
+<form action='http://www.baidu.com'>
+      <h1>欢迎登录</h1>
+      <div>
+        <label for="userName">用&nbsp;户&nbsp;名</label>
+        <input type="text" id="userName" name="username" placeholder="请输入用户名" >
+      </div>
+      <div>
+        <label for="">性别</label>
+        <div class="sex">
+            <input type="radio" name="sex" id="man">
+            <label for="man">男</label>
+            <input type="radio" name="sex" id="woman">
+            <label for="woman">女</label>
+        </div>
+
+          
+      </div>
+      <div>
+        <label for="passwordOne">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+        <input type="password" id="passwordOne" name="password" placeholder="请输入密码">
+      </div>
+      <div>
+        <label for="passwordTwo">确认密码</label>
+        <input type="password" id="passwordTwo" placeholder="请输入密码">
+      </div>
+      <div>
+        <label for="telephone">联系方式</label>
+        <input type="telephone" id="telephone" name="telephone" placeholder="请输入电话号码">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="请输入email">
+      </div>
+      <div>
+          <label for="location">联系地址</label>
+          <input type="text" id="location" name="location" placeholder="请输入地址">
+        </div>
+      <button type="submit" id="login">登&nbsp;&nbsp;&nbsp;录</button>
+      <input type="reset" value="重置">
+</form>
+    </div>
+    <script>
+      var loginBtn = document.getElementById('login');
+      var userNameInput = document.getElementById('userName');
+      var passwordOneInput = document.getElementById('passwordOne');
+      var passwordTwoInput = document.getElementById('passwordTwo');
+      var telephoneInput = document.getElementById('telephone');
+      var emailInput = document.getElementById('email');
+      var locationInput = document.getElementById('location');
+      
+      loginBtn.onclick = function(){
+        var userName = userNameInput.value;
+        var passwordOne = passwordOneInput.value;
+        var passwordTwo = passwordTwoInput.value;
+        var telephone = telephoneInput.value;
+        var email = emailInput.value;
+        var location = locationInput.value;
+        if(userName == '' || userName.length == 0 || passwordOne == '' || passwordOne.length == 0 || passwordTwo == '' || passwordTwo.length == 0 || telephone == '' || telephone.length == 0 || email == '' || email == 0 || location == '' || location.length == 0 ){
+            alert('信息不能为空');
+        }else if(!(passwordOne == passwordTwo)){
+          
+          alert('两次密码不一致');
+        }else if(!isTelephone(telephone)){
+          alert('请检查手机号码的格式')
+        }else{
+          return true;
+        }
+        return false;
+      }
+      function isTelephone(str){
+          var arr = str.split('-');
+          if(arr.length == 3 && arr[0].length == 3 && arr[1].length == 4 && arr[2].length == 4){
+              return true;
+          }
+          return false;
+      }
+    
+    
+    </script>
+  </body>
+</html>
