@@ -134,10 +134,9 @@
         var telephone = telephoneInput.value;
         var email = emailInput.value;
         var location = locationInput.value;
-        if(userName == '' || userName.length == 0 || passwordOne == '' || passwordOne.length == 0 || passwordTwo == '' || passwordTwo.length == 0 || telephone == '' || telephone.length == 0 || email == '' || email == 0 || location == '' || location.length == 0 ){
-            alert('信息不能为空');
+        if(userName == '' || userName.length == 0 ){
+            alert('用户名不能为空');
         }else if(!(passwordOne == passwordTwo)){
-          
           alert('两次密码不一致');
         }else if(!isTelephone(telephone)){
           alert('请检查手机号码的格式')
