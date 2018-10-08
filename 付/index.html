@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+    <!-- 
+                      ***            ***
+                     ***             ***
+                   ***               ***
+                 ***                 *** 
+               ******     **********************
+             ***  ***     **********************
+          ***     ***                ***
+                  ***                ***
+                  ***       ***      *** 
+                  ***        ***     ***
+                  ***         ***    *** 
+                  ***                ***
+                  ***                *** 
+                  ***         ***    ***
+                  ***          ***   ***
+                  ***            *** ***
+    -->
+    <title>小傻子 生日快乐</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+        
+        .tishi {
+            width: 100%;
+            height: 20px;
+        }
+        
+        .tishi p {
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+        
+        .tishi:hover p {
+            display: block;
+        }
+    </style>
+    <link href="style/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="style/jquery.js"></script>
+    <script type="text/javascript" src="style/garden.js"></script>
+    <script type="text/javascript" src="style/functions.js"></script>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <p><span class="comments">/**</span><br />
+                    <span class="space" /><span class="comments">* 小傻子?小可爱?,</span><br />
+                    <span class="space" /><span class="comments">* 今天呢是，2018年10月8日也就是农历的八月二十九  还有就是你的生日.</span><br />
+                    <span class="space" /><span class="comments">*/</span><br />
+                    <span class="comments">// 生日快乐   哈哈哈</span><br />
+                    <br />
+                    <span class="comments">// 你呢，照顾好自己，</span><br />
+                </p>
+                <p><span class="comments">// 生病了就喝点药  不要硬扛，</span><br />
+                </p>
+                <p><span class="comments">// 亲戚来了呢  就不要。。。   </span><br />
+                    <br />
+                    <span class="comments">// 算了  我也不说了  不然又嫌我烦了   哈哈哈</span><br />
+                </p>
+                <p><span class="comments">// 但是过生日又意味着大了一岁(老女人)   哈哈哈，</span><br />
+                    <br />
+                    <span class="comments">// 赶紧的和你的那个他   准备准备  收拾结婚   哈哈哈，</span></p>
+                <p><span class="comments">// 还等着给你随份子钱呢   哈哈哈</span></p>
+                <p><span class="comments">// 生日快乐 ~ 生日快乐 ~ 重要的事情说三遍(心里在想，这他妈的是两遍好不好，开头已经有一遍了，哈哈哈)</span><br />
+                    <br />
+                    <span class="comments"></span><br />
+                    <span class="comments"></span><br />
+                </p>
+                <p><span class="comments">// 可能你现在最想说的两个字</span></p>
+                <p><span class="comments">// 脑残    哈哈哈</span></p>
+                <p><span class="comments">// 最后，友情提示   鼠标放到左下角就可以看到了</span></p>
+
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages" style="text-align:center">
+                        <p>我该写点什么呢？？</p>
+                        <p>算了 什么也不写了</p>
+                        <p>生日快乐</p>
+                        <p>Happy Birthday!</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="tishi" style="position: fixed;bottom:0;left:0">
+            <p style="font-size: 10px;color:black;box-sizing:border-box;padding-left:20px;">我把字调小一点 悄悄告诉你 生理期快到了 要买姨妈巾了</p>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function() {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 10000);
+
+            $("#accept").click(function() {
+                $(this).hide();
+                $("#elapseClock").show();
+                var together = new Date();
+                timeElapse(together);
+                setInterval(function() {
+                    timeElapse(together);
+                }, 500);
+            })
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+
+</html>

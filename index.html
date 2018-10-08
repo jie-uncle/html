@@ -83,7 +83,7 @@
         <input type="text" id="userName" name="username" placeholder="请输入用户名" >
       </div>
       <div>
-        <label for="">性别</label>
+        <label>性别</label>
         <div class="sex">
             <input type="radio" name="sex" id="man">
             <label for="man">男</label>
@@ -145,14 +145,17 @@
         return false;
       }
       function isTelephone(str){
+          var p = /[a-z]/i;
+          var b = p.test(str);
+          if(b){
+              return false;
+          }
           var arr = str.split('-');
           if(arr.length == 3 && arr[0].length == 3 && arr[1].length == 4 && arr[2].length == 4){
               return true;
           }
           return false;
       }
-    
-    
     </script>
   </body>
 </html>
