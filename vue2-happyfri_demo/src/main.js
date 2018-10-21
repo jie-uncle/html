@@ -18,7 +18,7 @@ new Vue({
     components: { App },
     template: '<App/>',
     mounted() {
-        this.$http.get('../static/myData,.json')
+        this.$http.get('./static/myData.json')
             .then(
                 function(res) {
                     console.log(res.bodyText);
