@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="md5.js"></script>
+  <style>
+    .Activex {
+      width: 1000px;
+      height: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+    width="780" height="160">
+    <embed src="images/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"
+      width="780" height="160"></embed>
+  </object> -->
+  <div class="ActiveX">
+    <object classid="clsid:461284E8-135D-44B3-BD59-549150A773EC" id="spv" width="900px" height="600px"></object>
+  </div>
+  <script>
+    let IP = '39.107.83.84'
+    let myHost = IP
+    let myAppkey = '2b4607d0'
+    // 账号
+    let myOpUserUuid = '5b2eb534696b11e89c2e438f92627767'
+    // 网络类型 （目前是外网）
+    let myNetZoneUuid = '1225f6d97b484dd2885d96c211732298'
+    // 密码
+    let mySecret = '9d5740bd5412462abb2901b4b8318640'
+
+    init('spv', 'beda339671e440d4bb64c43672135248')
+
+    function init(id, cameraUuid) {
+      console.log(id, cameraUuid)
+      let seledCameraUuid = cameraUuid
+      var ocxObj = document.getElementById(id)
+      console.log(ocxObj)
+      let languageType = 1
+      let flag = ocxObj.SPV_Init(languageType)
+      if (flag === 0) {
+        let xml = ' <? xml version = "1.0" encoding = "UTF-8" ? > ' +
+          '<localParam> ' +
+          '<width>900</width> ' +
+          '<height>600</height> ' +
+          '<picType>1</picType> ' +
+          '<capturePath>F:/aa</capturePath> ' +
+          '<recordSize>2</recordSize> ' +
+          '<recordPath>F:/aa</recordPath> ' +
+          '<limitPreviewTime>1800</limitPreviewTime> ' +
+          '</localParam>'
+        let a = ocxObj.SPV_SetLocalParam(xml)
+        if (a === 0) {
+          var time = GetMilSeconds()
+          $.ajax({
+            url: 'https://' + myHost + '/openapi/service/vss/preview/getPreviewParamByCameraUuid?token=' +
+              GetSinglePreviewToken(time, seledCameraUuid),
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({
+              appkey: '2b4607d0',
+              time: time,
+              opUserUuid: myOpUserUuid,
+              cameraUuid: seledCameraUuid,
+              netZoneUuid: myNetZoneUuid
+            }),
+            success: function (xml) {
+              // 调OCX单路预览接口
+              if (xml.data) {
+                var ret = ocxObj.SPV_StartPreview(xml.data)
+                if (ret !== 0) {
+                  alert('单路预览失败：' + xml.data)
+                }
+              } else {
+                alert('查询预览参数失败')
+              }
+            }
+          })
+        }
+      }
+    }
+
+    function GetMilSeconds() {
+      return new Date().getTime()
+    }
+
+    function GetSinglePreviewToken(time, uuid) {
+      let uri = '/openapi/service/vss/preview/getPreviewParamByCameraUuid'
+      let strParam = {
+        'appkey': myAppkey,
+        'time': time,
+        'opUserUuid': myOpUserUuid,
+        'cameraUuid': uuid,
+        'netZoneUuid': myNetZoneUuid
+      }
+      let token = GenToken(uri, JSON.stringify(strParam), mySecret)
+      return token
+    }
+
+    function GenToken(uri, strParam, mySecret) {
+      let srcStr = uri + strParam + mySecret
+      let token = hex_md5(srcStr).toUpperCase() // 生成token
+      return token
+    }
+  </script>
+  <script>
+    
+  </script>
+</body>
+
+</html>

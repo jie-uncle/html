@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="ActiveX">
+    <object classid="clsid:461284E8-135D-44B3-BD59-549150A773EC" id="spv" width="900px" height="600px"></object>
+  </div>
+
+</body>
+<script>
+  var IP = '39.107.83.84'
+  var myHost = IP
+  var myAppkey = '2b4607d0'
+  // 账号
+  var myOpUserUuid = '5b2eb534696b11e89c2e438f92627767'
+  // 网络类型 （目前是外网）
+  var myNetZoneUuid = '1225f6d97b484dd2885d96c211732298'
+  // 密码
+  var mySecret = '9d5740bd5412462abb2901b4b8318640'
+
+  var seledCameraUuid = 'beda339671e440d4bb64c43672135248'
+  var languageType = 1;
+  var ocxObj = document.getElementById("spv");
+  var flag = ocxObj.SPV_Init(languageType);
+  console.log(flag)
+</script>
+
+</html>
